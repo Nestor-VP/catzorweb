@@ -35,6 +35,371 @@
             </div>
         </div>
 
+        <div class="container">
+            <section style="margin-top: 2%;">
+                <div class="row bg-custome">
+                    <div class="col-sm-6 my-1 dark-text">
+                        <h2 class="fw-bold">Catzor Commands</h2>
+                        <p class="command-descreption dark-text"> <b>Find all Catzor bot commands and information you need fast and easy</b></p>
+                    </div>
+                    
+                </div>
+                <hr>
+            </section>
+            <div class="mt-4"></div>
+            <div class="row">
+                <div class="col-md-4 my-2">
+                    <div class="card p-3 bg-dark">
+                        <h5>Select Commands Category</h5>
+                        <hr />
+                        <button onclick="active(this)" id="CategoryBtnAll" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class="fad fa-icons ttt"></i>&nbsp; All Commands</button>
+                        
+                            <button onclick="active(this)" id="CategoryBtn0" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-gift ttt'></i>&nbsp; General Commands</button>
+                        
+                            <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; Admin Commands</button>
+                        
+                            <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp; Super-Admin Commands</button>
+                        
+                            <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp; Server-Owner Commands</button>
+                        
+                    </div>
+                </div>
+                <div class="col-md-8 my-2 ">
+                    
+                    
+                        
+                            <div class="mt-4"></div>
+                        
+                        <div class="commands-section" id="Category0">
+    
+    
+                            <div class="accordion accordion-flush mt-2" id="help">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fhelp">
+                                             /tutorial&nbsp; <span class="command-descreption">- Displays a registration tutorial</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fhelp" class="accordion-collapse collapse" data-bs-parent="#help">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /tutorial
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="ban">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
+                                                 /bind&nbsp; <span class="command-descreption">- binds your discord and aoe2 account</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
+                                            <div class="accordion-body">
+                                                <span>Usage Instructions:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <ol>
+                                                        <li>Get your AOE2-id by following this steps:
+                                                            <ul>
+                                                                <li>visit  <a href="https://aoe2companion.com/" target="_blank">AOE2 Companion</a></li>
+                                                                <li>enter your aoe-name in the search-bar</li>
+                                                                <li>Now copy the number in the resulting URL <br>
+                                                                    (Ex. aoe2companion.com/profile/9040038 - Must copy: 9040038) </li>
+                                                              </ul>
+                                                        </li>
+                                                        <br>
+                                                        <li>Bind your account by typing: /bind (Aoe-ID) <br> Ex. /bind 9040038</li>
+                                                        
+                                                      </ol>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="kick">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
+                                                 /join&nbsp; <span class="command-descreption">- join current server-leaderboard</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
+                                            <div class="accordion-body">
+                                                <span>Usage instructions:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <ul>
+                                                        <li> type /join</li>
+                                                        <li> Push join button</li>
+    
+                                                      </ul>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="mute">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
+                                                 /info&nbsp; <span class="command-descreption">- display a member player-card</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                                            <div class="accordion-body">
+                                                <span>Usage instructions</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <ul>
+                                                        <li> type <span style="background-color:#2f88fd; color:white;"> /info</span> to display your personal player-card</li>
+                                                        <li> type <span style="background-color:#2f88fd; color:white;"> /info @friend-name</span> to display your friend player-card</li>
+    
+                                                      </ul>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="accordion accordion-flush mt-2" id="ping">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fping">
+                                                 /update&nbsp; <span class="command-descreption">- Manually update your AOE2 ELOs</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fping" class="accordion-collapse collapse" data-bs-parent="#ping">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /update
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="accordion accordion-flush mt-2" id="invite">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                                                 /leave&nbsp; <span class="command-descreption">- Leave current server leaderboard</span>
+                                            </button>
+                                        </h2>
+                                        <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <li> type /leave</li>
+                                                    <li> Push leave-button to confirm your decision</li>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                                <div class="accordion accordion-flush mt-2" id="invite">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                                                 /unbind&nbsp; <span class="command-descreption">- Unbind your discord and aoe2 account</span>
+                                            </button>
+                                        </h2>
+                                        <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <li> type /unbind</li>
+                                                    <li> Push unbind to confirm your decision</li>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                    
+                        
+                        <div class="commands-section" id="Category1">
+                        
+                                <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                                 /verify&nbsp; <span class="command-descreption">- Sets verify status ☑️ to selected discord-account </span>
+                                            </button>
+                                        </h2>
+                                        <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                    <ul>
+                                                        <li> type <span style="background-color:#2f88fd; color:white;"> /verify @discord-name</span> to verify the selected user</li>
+                                                        <li> type <span style="background-color:#2f88fd; color:white;"> /unverify @discord-name</span> to remove the verified status</li>
+    
+                                                      </ul>
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                        </div>
+                    
+                        
+                        <div class="commands-section" id="Category2">
+    
+    
+                            <div class="accordion accordion-flush mt-2" id="reactionrole">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freactionrole">
+                                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /admin&nbsp; <span class="command-descreption">- Gives admin privileges to selected user</span>
+                                        </button>
+                                    </h2>
+                                    <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                type <span style="background-color:#2f88fd; color:white;"> /admin @discord-name</span> to set the selected user as admin
+                                                <br>
+    
+                                                <ul>
+                                                    <li> Admin privileges allows to use Catzor-BOT admin commands , does not involves other BOTs privileges </li>
+                                                    <li> Super-Admins are selected by Catzor-BOT developer</li>
+    
+                                                  </ul>
+    
+    
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                
+                                
+                            
+                        </div>
+                    
+                        
+                        <div class="commands-section" id="Category3">
+                            
+                            
+                                
+                                <div class="accordion accordion-flush mt-2" id="slowmode">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmode">
+                                                <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /managesroles&nbsp; <span class="command-descreption">- Open AOE2-roles manager</span>
+                                            </button>
+                                        </h2>
+                                        <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                                            <div class="accordion-body">
+                                                <span>Usage Examples:</span> <br />
+                                                <span class="examples">
+                                                    
+                                                        /managesroles 
+    
+                                                        <br>
+                                                        instruction are displayed when  typing the command
+                                                    
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+        
+        <input id="commands" value="[{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-gift ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Moderation Commands&#34;,&#34;commands&#34;:[&#34;ban&#34;,&#34;kick&#34;,&#34;mute&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-globe-europe ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; General Commands&#34;,&#34;commands&#34;:[&#34;help&#34;,&#34;ping&#34;,&#34;invite&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fa-hammer-war ttt&#39;&gt;&lt;/i&gt;&amp;nbsp;&amp;nbsp; Leveling Commands&#34;,&#34;commands&#34;:[&#34;leaderboard&#34;]},{&#34;title&#34;:&#34;&lt;i class=&#39;fas fas fa-crown ttt&#39;&gt;&lt;/i&gt;&amp;nbsp; Premium Commands&#34;,&#34;commands&#34;:[&#34;reactionrole&#34;,&#34;slowmode&#34;]}]" hidden />
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="/fontawesome/all.min.js"></script>
+        <script src="/js/animation.js"></script>
+        <script>
+            function active(elm){
+                document.getElementById("CategoryBtnAll").classList.remove("active");
+                
+                    document.getElementById("CategoryBtn0").classList.remove("active");
+                    document.getElementById("Category0").setAttribute("hidden", "");
+                
+                    document.getElementById("CategoryBtn1").classList.remove("active");
+                    document.getElementById("Category1").setAttribute("hidden", "");
+                
+                    document.getElementById("CategoryBtn2").classList.remove("active");
+                    document.getElementById("Category2").setAttribute("hidden", "");
+                
+                    document.getElementById("CategoryBtn3").classList.remove("active");
+                    document.getElementById("Category3").setAttribute("hidden", "");
+                
+                elm.classList.add("active");
+                if(elm.id.replace("CategoryBtn", "") == "All"){
+                    
+                        document.getElementById("Category0").removeAttribute("hidden");
+                    
+                        document.getElementById("Category1").removeAttribute("hidden");
+                    
+                        document.getElementById("Category2").removeAttribute("hidden");
+                    
+                        document.getElementById("Category3").removeAttribute("hidden");
+                    
+                }else{
+                    document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
+                }
+            }
+            document.getElementById("CategoryBtnAll").click();
+            function search(arg){
+                let commands = JSON.parse(document.getElementById("commands").value);
+                let cmds = [];
+                commands.forEach(category => {
+                    category.commands.forEach(command => {
+                        cmds.push(command);
+                    })
+                })
+                let existedCmds = cmds.filter(obj => obj.includes(arg.toLowerCase()));
+                cmds.forEach(cmd => {
+                    document.getElementById(cmd).setAttribute("hidden", "");
+                })
+                existedCmds.forEach(cmd => {
+                    document.getElementById(cmd).removeAttribute("hidden");
+                })
+            }
+        </script>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

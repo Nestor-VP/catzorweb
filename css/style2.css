@@ -7,5 +7,14 @@
         }
 
         .bg-custome {
-    background-color: #ff9102; /* Tu color personalizado */
+    background-color: hsl(22, 94%, 49%); /* Tu color personalizado */
         }
+
+    .orange-text {
+            color: #34bbfa; /* Tu color de texto personalizado */
+          }
+    
+    .dark-text {
+            color: hwb(30 13% 87%); /* Tu color de texto personalizado */
+          }
+    
