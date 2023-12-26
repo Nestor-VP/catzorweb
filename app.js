@@ -7,9 +7,13 @@ const puerto = 3000;
 // Ruta para servir la página HTML
 app.get('/', (req, res) => {
 
-
-
     res.sendFile(__dirname + '/public/index.html');
+  });
+
+// Ruta para servir la página HTML
+app.get('/commands', (req, res) => {
+
+    res.sendFile(__dirname + '/public/commands.html');
   });
 
 
