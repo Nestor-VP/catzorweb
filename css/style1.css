@@ -65,3 +65,14 @@ img.catzorimg {
     transform: translate3d(0px, 0px, -250px);
   }
 }
+
+.image-container {
+  background-image: url('/img/wallpaper.png'); /* Ruta de tu imagen con fondo transparente */
+  background-size: cover;
+  
+  height: 300px; /* Altura del contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Color del texto dentro del contenedor */
+}
