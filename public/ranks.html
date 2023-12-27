@@ -45,18 +45,18 @@
 
     <!-- Messages BAR-->
 
-    <nav class="navbar bg-orange">
+    <nav id="msg_bar" class="navbar bg-orange">
         <div class="container-fluid">
 
           <div>
-            <div id="server_name">Hello</div>
-            <div id="mensaje">UWU</div>
+            <div id="server_name" class="container-fluid"></div>
+            <div id="mensaje" class="container-fluid"></div>
           </div>
            <!-- Need to Add Selector [SINGLES RANKING , TEAM RANKING]-->
           <div class="gap-2 py-2" id="buttons">
             
-            <button id = "btn_rank1" class="btn btn-dark " type="button" >1v1 Ranking</button>
-            <button id = "btn_rank2" class="btn btn-dark " type="button" >Team Ranking</button>
+            <button id = "btn_rank1" class="btn btn-dark " type="button" onclick="Show_rank_single()" >1v1 Ranking</button>
+            <button id = "btn_rank2" class="btn btn-dark " type="button" onclick="Show_rank_team()">Team Ranking</button>
           </div>
         </div>
       </nav>

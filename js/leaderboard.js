@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     else {
         // Si no se proporciona un ID en la URL, muestra un mensaje
-        document.getElementById('mensaje').innerHTML = "Enter Server ID";
+        //document.getElementById('mensaje').innerHTML = "Enter Server ID";
     }
 });
 
@@ -119,7 +119,7 @@ function buscarPorId() {
         Show_rank_single();
 
         // Después de completar la solicitud AJAX, actualiza el URL sin recargar la página
-        history.pushState({}, '', `/?id=${obj}`);
+        history.pushState({}, '', `/ranks?id=${obj}`);
     })
     .catch(error => {
         // Muestra un mensaje si ocurre un error

@@ -1,3 +1,7 @@
+body{
+    background-color: hwb(0 58% 42%);
+}
+
 .bg-green {
     background-color: hsl(125, 100%, 18%); /* Tu color personalizado */
     }
@@ -24,3 +28,35 @@
     {
         display: none;
     }
+
+/* Style de las tablas ranking ( default: none) */
+
+#ranking_single {
+    display: none;
+  }
+
+#ranking_team {
+    display: none;
+  }
+
+/* Styles de mensajes */
+
+#ranking_single {
+    display: none;
+  }
+
+#mensaje {
+    background-color: hwb(0 0% 100%) ;
+    color: rgb(35, 190, 252);
+    font-size: 16px;
+    font-family: "Arial";
+    font-weight: bold;
+  }
+
+#server_name {
+    background-color: hwb(0 0% 100%) ;
+    color: hwb(0 100% 0%);
+    font-size: 18px;
+    font-family: "Arial";
+    font-weight: bold;
+  }
