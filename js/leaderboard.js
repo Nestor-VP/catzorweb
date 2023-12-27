@@ -24,7 +24,7 @@ formulario.addEventListener("submit", function(event) {
 
 function buscarPorId() {
     var obj = document.getElementById('numero').value;
-    var url = `http://localhost:3000/server?id=${encodeURIComponent(obj)}`;
+    var url = `/server?id=${encodeURIComponent(obj)}`;
 
     
 
