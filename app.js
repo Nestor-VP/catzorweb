@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const mysql = require('mysql2');
 const app = express();
 const puerto = 3000;
 require('dotenv').config();
 
+// Habilita CORS para todas las rutas
+app.use(cors());
 
 // Configuración de la conexión a MySQL
 const connection = mysql.createConnection({
