@@ -1,0 +1,26 @@
+.bg-green {
+    background-color: hsl(125, 100%, 18%); /* Tu color personalizado */
+    }
+
+    .bg-orange {
+    background-color: hwb(22 0% 0%); /* Tu color personalizado */
+    }
+
+    #buttons
+    {
+        display: none;
+    }
+    #button1
+    {
+        display: none;
+    }
+
+    #button2
+    {
+        display: none;
+    }
+
+    #user-search-bar
+    {
+        display: none;
+    }
