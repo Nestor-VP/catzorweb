@@ -9,25 +9,28 @@ require('dotenv').config();
 app.use(cors());
 
 // Configuración de la conexión a MySQL
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host: process.env.HOSTNAME_DB,
     user: process.env.USER_DB,
     password: process.env.PASSWORD_DB,
     database: process.env.DATABASE,
+    connectionLimit: 20,
   });
 
 const db = connection.promise();
 
+// verify connection
+// Verify if the connection is established successfully
+db.query('SELECT 1')
+  .then(() => {
+    console.log('Connected to the Catzor-BOT database!');
+  })
+  .catch((error) => {
+    console.error('Failed to establish a connection to the database:', error);
+  
+});
 
 
-  // Conectar a la base de datos
-  connection.connect(err => {
-    if (err) {
-      console.error('Error al conectar a MySQL:', err);
-      return;
-    }
-    console.log('Conectado a MySQL');
-  });
 
 
   // declarando variable para los rankings ( single y team)
