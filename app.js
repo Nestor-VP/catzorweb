@@ -64,6 +64,14 @@ app.get('/ranks', (req, res) => {
   });
 
 
+
+// Ruta de la pagina de rankings
+app.get('/main', (req, res) => {
+
+  res.sendFile(__dirname + '/public/aoebots.html');
+});
+
+
 // Ruta para manejar el formulario de busqueda server
 app.get('/server', async (req, res) => {
 
