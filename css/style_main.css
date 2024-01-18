@@ -97,3 +97,40 @@ img.catzorimg {
   justify-content: center;
 
 }
+
+/* Estilos de Pruba */
+.custom-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-list-item span {
+  flex-grow: 1;
+  margin-right: 10px; /* Ajusta el margen entre el texto y los dos puntos */
+}
+
+
+
+b {
+  display: inline-block;
+  min-width: 75px;
+}
+
+
+
+.custom-box {
+  transition: box-shadow 0.1s ease-in-out; /* Agregamos una transición para un efecto suave */
+}
+
+.custom-box:hover {
+  box-shadow: 0 0 60px rgb(0, 0, 0); /* Cambiamos la sombra al pasar el ratón */
+}
+
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
