@@ -60,3 +60,13 @@ body{
     font-family: "Arial";
     font-weight: bold;
   }
+
+
+  .bg-clan1 {
+    background-color: hsl(54, 100%, 17%); /* Tu color personalizado */
+    }
+
+  .bg-clan2 {
+    background-color: hwb(194 7% 29%); /* Tu color personalizado */
+    }
+
