@@ -52,6 +52,7 @@ app.use('/img',express.static('img'));
 // Ruta de la pagina principal aoebots
 app.get('/', (req, res) => {
 
+
   res.sendFile(__dirname + '/public/index.html');
 });
 
@@ -93,7 +94,13 @@ app.get('/clanbot/ranks', (req, res) => {
   res.sendFile(__dirname + '/public/clan_ranks.html');
 });
 
+//-------------------------------------------
+// sitemap
 
+app.get('/sitemap.xml', function(req, res) {
+
+  res.sendFile(__dirname + '/public/sitemap.xml');
+  });
 
 
 // Ruta para manejar el formulario de busqueda server ( elobot)
