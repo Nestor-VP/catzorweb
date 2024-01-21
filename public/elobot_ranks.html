@@ -103,6 +103,38 @@
       <!-- END TABLE-->
 
 
+       <!-- Botón para Ir Arriba -->
+          <button id="scrollToTopBtn" class="btn btn-info" onclick="scrollToTop()">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                        <path d="M8 2.879 2.757 8.121a1 1 0 1 0 1.414 1.414L8 5.207l4.829 4.828a1 1 0 1 0 1.414-1.414L8 2.879z"/>
+                      </svg>
+          </button>
+            
+              
+              <script>
+                // Mostrar u ocultar el botón según la posición del usuario
+                window.onscroll = function() {
+                  scrollFunction();
+                };
+            
+                function scrollFunction() {
+                  var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollToTopBtn.style.display = "block";
+                  } else {
+                    scrollToTopBtn.style.display = "none";
+                  }
+                }
+            
+                // Desplazar hacia arriba al hacer clic en el botón
+                function scrollToTop() {
+                  document.body.scrollTop = 0; // Para Safari
+                  document.documentElement.scrollTop = 0; // Para otros navegadores
+                }
+              </script>
+
+
 
 
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
