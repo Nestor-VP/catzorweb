@@ -1,6 +1,11 @@
 /* En tu hoja de estilo CSS personalizada */
 
 
+body{
+
+    background-color: hsl(0, 0%, 0%); /* Tu color personalizado */
+
+}
   
 .bg-custom {
     background-color: hsl(128, 97%, 13%); /* Tu color personalizado */
@@ -9,7 +14,12 @@
 
   
   .custom-text {
-    color: #ff7300; /* Tu color de texto personalizado */
+    color: #0a1531; /* Tu color de texto personalizado */
+  }
+
+
+  .custom-text1 {
+    color: hsl(22, 100%, 50%); /* Tu color de texto personalizado */
   }
 
   .custom-button {
@@ -106,10 +116,44 @@ img.catzorimg {
   background-color: rgba(19, 99, 3, 0.8); /* Tu color personalizado */
 }
 
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
+/* Accordion */
+
+
+
+.accordion{
+    max-width: 600px !important;
+    margin: 50px auto;
+    box-shadow: 0 2px 25px 0 rgba(110, 130, 208, .18) !important;
 }
+
+
+.accordion-button{
+    background-color: #bdbdbd !important;
+    color: #0c0c0c !important;
+    position: relative;
+    box-shadow: none !important;
+}
+
+.accordion-button:active, .accordion-button:focus{
+    border: none !important;
+}
+
+
+.accordion-button:hover{
+    background: #ff7300 !important;
+}
+
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+
+
+  hr {
+    border-color: #ff7300 !important;
+  }
 

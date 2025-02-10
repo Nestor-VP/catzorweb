@@ -1,35 +1,34 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // Obtén el ID de la URL
     var urlParams = new URLSearchParams(window.location.search);
-    var idFromUrl = urlParams.get('id');
+    console.log(urlParams);
+    var idFromUrl = urlParams.get('tag');
+    console.log(idFromUrl);
 
     // Si hay un ID en la URL, llénalo en el campo de entrada y realiza la búsqueda
     if (idFromUrl) {
-        document.getElementById('numero').value = idFromUrl;
-        buscarPorId();
+        document.getElementById('clan_tag').value = idFromUrl;
+        buscarPorTag();
     }
-    else {
-        // Si no se proporciona un ID en la URL, muestra un mensaje
-        //document.getElementById('mensaje').innerHTML = "Enter Server ID";
-    }
+
 });
 
 var formulario = document.getElementById("miFormulario");
 
 formulario.addEventListener("submit", function(event) {
     event.preventDefault();
-    buscarPorId();
+    buscarPorTag();
 });
 
-function buscarPorId() {
-    var obj = document.getElementById('numero').value;
-    var url = `/server?id=${encodeURIComponent(obj)}`;
+function buscarPorTag() {
+    var obj = document.getElementById('clan_tag').value;
+    var load_Symbol = document.getElementById('loadingSymbol');
+    var url = `/clansearch?tag=${encodeURIComponent(obj)}`;
+
+    // Muestra el símbolo de carga
+    load_Symbol.style.display = "block";
 
     
-
-    var btn1 = document.querySelector('#btn_rank1');
-    var btn2 = document.querySelector('#btn_rank2');
     var buttons = document.querySelector('#buttons');
 
     var tabla = document.getElementById("ranking_single");
@@ -47,8 +46,8 @@ function buscarPorId() {
             document.getElementById('server_name').innerHTML = "";
             tbody.innerHTML = "";
             tbody2.innerHTML = "";
-            throw new Error(`Server ${obj} not found`);
-            
+            load_Symbol.style.display = "none";
+            throw new Error(`Clan ${obj} not found`);
         }
 
         buttons.style.display = 'flex';
@@ -67,15 +66,14 @@ function buscarPorId() {
 
         const rank_single = data.rank_single;
         const rank_team = data.rank_team;
-        const server_name = data.server_name[0].server_name;
+        const clan_name = data.clan_name;
+        const clan_tag = data.clan_tag;
+        
 
 
         //console.log(rank_single);
 
-        document.getElementById('server_name').innerHTML = "Server: " +server_name;
-
-
-        
+        document.getElementById('server_name').innerHTML = `Clan: ${clan_name}  -- Tag: ${clan_tag}`;
 
         // Recorre el JSON y agrega filas a la tabla
 
@@ -85,18 +83,14 @@ function buscarPorId() {
             var rank_cell = fila.insertCell(0);
             var elo_cell = fila.insertCell(1);
             var name_cell = fila.insertCell(2);
-            
+            var country_cell = fila.insertCell(3);
 
             // Llena las celdas con los valores del JSON
-            const ver_status = item.verify;
-            let status_simbol = "❌";
-
-            if(ver_status == 1){ status_simbol = "☑️";}
-
-            name_cell.innerHTML = item.aoe_name + status_simbol;
             
-            elo_cell.innerHTML = item.elo_single;
-            rank_cell.innerHTML = item.rank_single;
+            rank_cell.innerHTML = item[0];
+            elo_cell.innerHTML = item[1];
+            name_cell.innerHTML = item[2];            
+            country_cell.innerHTML = item[3];
         });
 
         // Filling Elo Team leaderboard
@@ -105,29 +99,28 @@ function buscarPorId() {
             var rank_cell = fila.insertCell(0);
             var elo_cell = fila.insertCell(1);
             var name_cell = fila.insertCell(2);
+            var country_cell = fila.insertCell(3);
             
 
             // Llena las celdas con los valores del JSON
-            const ver_status = item.verify;
-            let status_simbol = "❌";
 
-            if(ver_status == 1){ status_simbol = "☑️";} 
-
-            name_cell.innerHTML = item.aoe_name + status_simbol;
-            
-            elo_cell.innerHTML = item.elo_team;
-            rank_cell.innerHTML = item.rank_team;
+            rank_cell.innerHTML = item[0];
+            elo_cell.innerHTML = item[1];
+            name_cell.innerHTML = item[2];            
+            country_cell.innerHTML = item[3];
         });
 
         // Show Rank_single as default
         Show_rank_single();
+        load_Symbol.style.display = "none";
 
         // Después de completar la solicitud AJAX, actualiza el URL sin recargar la página
-        history.pushState({}, '', `/elobot/ranks?id=${obj}`);
+        history.pushState({}, '', `/clanbot/ranks?tag=${obj}`);
     })
     .catch(error => {
         // Muestra un mensaje si ocurre un error
         document.getElementById('mensaje').innerHTML = error.message;
+        load_Symbol.style.display = "none";
         console.error('Error al realizar la operación:', error);
     });
 }
@@ -157,5 +150,3 @@ function Show_rank_team()
    ranking_team.style.display = 'table';
 
 }
-
-
